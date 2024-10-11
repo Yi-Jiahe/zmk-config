@@ -1,22 +1,84 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+/*
+Ctrl+Z Undo
+Ctrl+Y Redo
+Ctrl+X Cut
+Ctrl+V Paste
+Ctrl+T Transform
+
+Ctrl+D Deselect
+Shift+F7 Invert selected area 
+
+Shift+Z Flip Horizontal
+Ctrl+Alt+0 100%
+
+Alt+] Layer Above
+Alt+[ Layer Below
+
+- Rotate Left
+^ Rotate Right
+
+Ctrl+; Zoom in
+Ctrl+- Zoom out
+
+Options
+
+[ Select Smaller  
+] Select Larger
+X Switch main and sub colour
+
+Tools
+H Hand
+R Rotate
+E Eraser
+*/
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
             // -------------------------------------------------
-            // |    TAB    |     A     |     S     |     D    |
-            // | LEFT SHIFT|     Z     |     X     |     C    |
-            // | LEFT CTRL | LEFT ALT  |   SPACE   |
+            // |    ESC    |     H     |     R     |     E    |
+            // |   RAISE   |  LCTRL+T  | LSHIFT+Z  | LCTRL+Z  |
+            // |   LOWER   | LEFT CTRL | LEFT ALT  |
             bindings = <
-                &kp TAB     &kp A       &kp S      &kp D
-                &kp LSHFT   &kp Z       &kp X      &kp C
-                &kp LCTRL   &kp LALT    &kp SPACE
+                &kp ESC     &kp H        &kp R      &kp E
+                &mo 2       &kp LC(T)    &kp LS(Z)  &kp LC(Z)
+                &mo 1       &kp LCTRL    &kp LALT
             >;
 
-            sensor-bindings = <&inc_dec_kp PLUS MINUS>;
+            sensor-bindings = <&inc_dec_kp CARET MINUS>;
+        };
+
+        lower_layer { // Layer 1
+            // -------------------------------------------------
+            // |    ESC    |     M     |     S     |     D    |
+            // |   RAISE   |  LCTRL+D  |  LCTRL+X  | LCTRL+V  |
+            // |   LOWER   | LEFT CTRL | LEFT ALT  |
+            bindings = <
+                &kp ESC     &kp M        &kp S      &kp D
+                &mo 2       &kp LC(D)    &kp LC(X)      &kp LC(V)
+                &mo 1       &kp LCTRL    &kp LALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(SEMI) LC(MINUS)>;
+        };
+        
+        upper_layer { // Layer 2
+            // -------------------------------------------------
+            // |    ESC    |     A     |     G     |     P    |
+            // |   RAISE   |     Z     |     X     | LCTRL+Y  |
+            // |   LOWER   | LEFT CTRL | LEFT ALT  |
+            bindings = <
+                &kp ESC     &kp A        &kp G      &kp P
+                &mo 2       &kp Z        &kp X      &kp LC(Y)
+                &mo 1       &kp LCTRL    &kp LALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp RBKT LBKT>;
         };
     };
  };
