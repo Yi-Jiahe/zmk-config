@@ -3,7 +3,5 @@ id: tenta_one
 name: Tenta One
 type: shield
 requires: [pro_micro]
-exposes: [i2c_oled]
 features:
   - keys
-  - display
