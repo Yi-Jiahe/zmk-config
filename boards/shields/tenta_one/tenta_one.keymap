@@ -1,3 +1,6 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -9,7 +12,7 @@
             // | LEFT CTRL | LEFT ALT  |   SPACE   |
             bindings = <
                 &kp TAB     &kp A       &kp S      &kp D
-                &kp LSHFT   &kp A       &kp X      &kp C
+                &kp LSHFT   &kp Z       &kp X      &kp C
                 &kp LCTRL   &kp LALT    &kp SPACE
             >;
         };
