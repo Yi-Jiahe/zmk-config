@@ -8,7 +8,7 @@
             // | LEFT SHIFT|     Z     |     X     |     C    |
             // | LEFT CTRL | LEFT ALT  |   SPACE   |
             bindings = <
-                &kp TAG     &kp A       &kp S      &kp D
+                &kp TAB     &kp A       &kp S      &kp D
                 &kp LSHFT   &kp A       &kp X      &kp C
                 &kp LCTRL   &kp LALT    &kp SPACE
             >;
