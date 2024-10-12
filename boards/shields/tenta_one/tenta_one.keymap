@@ -46,6 +46,7 @@ E Eraser
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &mo 1>
                 , <&macro_tap &rgb_ug LAYER_COLOR_1>
@@ -58,6 +59,7 @@ E Eraser
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &mo 1>
                 , <&macro_tap &rgb_ug LAYER_COLOR_2>
