@@ -230,7 +230,7 @@ E Eraser
             >;
 
         // Not actually useful because it gets overwritten by RGB_COLOR_HSB
-        sensor-bindings = <&inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_BRD>;
+        sensor-bindings = <&inc_dec_kp &none &none>;
         };
 
         layer_six { // Layer 6
