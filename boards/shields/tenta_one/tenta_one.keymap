@@ -64,7 +64,7 @@ E Eraser
                 , <&macro_pause_for_release>
                 , <&macro_release &mo 1>
                 , <&macro_tap &rgb_ug LAYER_COLOR_0>;
-        }
+        };
     };
 };
 
