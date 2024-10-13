@@ -64,6 +64,6 @@
     chosen {
         zmk,physical-layout = &default_layout;
         // Other chosen items
-        zmk,underglow = &led_strip;
+        // zmk,underglow = &led_strip;
     };
 };

@@ -238,7 +238,7 @@ E Eraser
 
         layer_six { // Layer 6
             // -------------------------------------------------
-            // | BT CLEAR  |  OUT_BLE  |  OUT_USB  |   B    |
+            // | BT CLEAR  |  OUT_BLE  |  OUT_USB  |     B     |
             // |  LAYER 2  | BT PROF 1 | BT PROF 2 | BT PROF 3 |
             // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
             bindings = <    
