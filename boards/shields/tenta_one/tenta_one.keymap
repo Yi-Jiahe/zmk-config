@@ -1,6 +1,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
 
 /*
 Ctrl+Z Undo
@@ -235,12 +238,12 @@ E Eraser
 
         layer_six { // Layer 6
             // -------------------------------------------------
-            // |    ESC    |   NONE    |   NONE    |   NONE    |
-            // |  LAYER 2  |   NONE    |   NONE    |   NONE    |
+            // | BT  CLEAR |  OUT_BLE  |  OUT_USB  |   NONE    |
+            // |  LAYER 2  | BT PROF 1 | BT PROF 2 | BT PROF 3 |
             // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
             bindings = <
-                &kp ESC     &none        &none      &none
-                &layer_two_underglow       &none        &none      &none
+                &bt BT_CLR     &out OUT_BLE       &out OUT_USB     &none
+                &layer_two_underglow       &bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2
                 &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
