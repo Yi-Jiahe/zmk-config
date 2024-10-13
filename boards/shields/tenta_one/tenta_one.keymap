@@ -148,6 +148,14 @@ E Eraser
 };
 
 / {
+    behaviors {
+        bt_encoder: bt_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -247,7 +255,7 @@ E Eraser
                 &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
-            sensor-bindings = <&inc_dec_kp &none &none>;
+            sensor-bindings = <&bt_encoder>;
         };
     };
  };
