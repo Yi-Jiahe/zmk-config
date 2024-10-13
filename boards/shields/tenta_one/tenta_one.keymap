@@ -238,11 +238,11 @@ E Eraser
 
         layer_six { // Layer 6
             // -------------------------------------------------
-            // | BT  CLEAR |  OUT_BLE  |  OUT_USB  |   NONE    |
+            // | BT CLEAR  |  OUT_BLE  |  OUT_USB  |   B    |
             // |  LAYER 2  | BT PROF 1 | BT PROF 2 | BT PROF 3 |
             // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
-            bindings = <
-                &bt BT_CLR     &out OUT_BLE       &out OUT_USB     &none
+            bindings = <    
+                &bt BT_CLR     &out OUT_BLE       &out OUT_USB     &kp B
                 &layer_two_underglow       &bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2
                 &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
             >;
