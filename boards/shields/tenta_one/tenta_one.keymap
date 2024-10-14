@@ -36,13 +36,15 @@ X Switch main and sub colour
 Tools
 H Hand
 R Rotate
+P Pen,Pencil
 E Eraser
+/ Zoom
 */
 
 #define LAYER_COLOR_0 RGB_COLOR_HSB(270, 100, 25) // Ina Purple
 #define LAYER_COLOR_1 RGB_COLOR_HSB(315, 100, 25) // Pink
-#define LAYER_COLOR_2 RGB_COLOR_HSB(  0, 100, 25)   // Red 
-#define LAYER_COLOR_3 RGB_COLOR_HSB( 30, 100, 25)  // Orange
+#define LAYER_COLOR_2 RGB_COLOR_HSB(  0, 100, 25) // Red 
+#define LAYER_COLOR_3 RGB_COLOR_HSB( 30, 100, 25) // Orange
 #define LAYER_COLOR_4 RGB_COLOR_HSB(120, 100, 25) // Green
 #define LAYER_COLOR_5 RGB_COLOR_HSB(190, 100, 25) // Sky Blue
 #define LAYER_COLOR_6 RGB_COLOR_HSB(220, 100, 25) // Blue
@@ -161,12 +163,12 @@ E Eraser
 
         default_layer { // Layer 0
             // -------------------------------------------------
-            // |    ESC    |     H     |     R     |    P    |
+            // |    ESC    |     /     |     H     |    P    |
             // |  LAYER 1  |  LCTRL+T  | LSHIFT+Z  | LCTRL+Z  |
             // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
-                &kp ESC     &kp H        &kp R      &kp P
-                &layer_one_underglow       &kp LC(T)    &kp LS(Z)  &kp LC(Z)
+                &kp ESC                    &kp H                     &kp H      &kp P
+                &layer_one_underglow       &kp LC(T)                 &kp LS(Z)  &kp LC(Z)
                 &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
@@ -204,11 +206,11 @@ E Eraser
         layer_three { // Layer 3
             // -------------------------------------------------
             // |    ESC    |   NONE    |   NONE    |   NONE    |
-            // |  LAYER 1  |   NONE    |   NONE    |   NONE    |
+            // |  LAYER 1  |  LCTRL+S  |   NONE    |   NONE    |
             // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
                 &kp ESC     &none        &none      &none
-                &layer_one_underglow       &none        &none      &none
+                &layer_one_underglow       &LC(S)        &none      &none
                 &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
