@@ -39,13 +39,13 @@ R Rotate
 E Eraser
 */
 
-#define LAYER_COLOR_0 RGB_COLOR_HSB(270, 100, 50) // Ina Purple
-#define LAYER_COLOR_1 RGB_COLOR_HSB(315, 100, 50) // Pink
-#define LAYER_COLOR_2 RGB_COLOR_HSB(0, 100, 50)   // Red 
-#define LAYER_COLOR_3 RGB_COLOR_HSB(30, 100, 50)  // Orange
-#define LAYER_COLOR_4 RGB_COLOR_HSB(120, 100, 50) // Green
-#define LAYER_COLOR_5 RGB_COLOR_HSB(190, 100, 50) // Sky Blue
-#define LAYER_COLOR_6 RGB_COLOR_HSB(220, 100, 50) // Blue
+#define LAYER_COLOR_0 RGB_COLOR_HSB(270, 100, 25) // Ina Purple
+#define LAYER_COLOR_1 RGB_COLOR_HSB(315, 100, 25) // Pink
+#define LAYER_COLOR_2 RGB_COLOR_HSB(  0, 100, 25)   // Red 
+#define LAYER_COLOR_3 RGB_COLOR_HSB( 30, 100, 25)  // Orange
+#define LAYER_COLOR_4 RGB_COLOR_HSB(120, 100, 25) // Green
+#define LAYER_COLOR_5 RGB_COLOR_HSB(190, 100, 25) // Sky Blue
+#define LAYER_COLOR_6 RGB_COLOR_HSB(220, 100, 25) // Blue
 
 / {
     macros {
@@ -161,13 +161,13 @@ E Eraser
 
         default_layer { // Layer 0
             // -------------------------------------------------
-            // |    ESC    |     H     |     R     |     E    |
-            // |  LAYER 2  |  LCTRL+T  | LSHIFT+Z  | LCTRL+Z  |
-            // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
+            // |    ESC    |     H     |     R     |    P    |
+            // |  LAYER 1  |  LCTRL+T  | LSHIFT+Z  | LCTRL+Z  |
+            // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
-                &kp ESC     &kp H        &kp R      &kp E
-                &layer_two_underglow       &kp LC(T)    &kp LS(Z)  &kp LC(Z)
-                &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
+                &kp ESC     &kp H        &kp R      &kp P
+                &layer_one_underglow       &kp LC(T)    &kp LS(Z)  &kp LC(Z)
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
             sensor-bindings = <&inc_dec_kp CARET MINUS>;
@@ -176,12 +176,12 @@ E Eraser
         lower_layer { // Layer 1
             // -------------------------------------------------
             // |    ESC    |     M     |     S     |     D    |
-            // |  LAYER 2  |  LCTRL+D  |  LCTRL+X  | LCTRL+V  |
-            // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
+            // |  LAYER 1  |  LCTRL+D  |  LCTRL+X  | LCTRL+V  |
+            // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
                 &kp ESC     &kp M        &kp S      &kp D
-                &layer_two_underglow       &kp LC(D)    &kp LC(X)      &kp LC(V)
-                &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
+                &layer_one_underglow       &kp LC(D)    &kp LC(X)      &kp LC(V)
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
             sensor-bindings = <&inc_dec_kp LC(SEMI) LC(MINUS)>;
@@ -190,12 +190,12 @@ E Eraser
         upper_layer { // Layer 2
             // -------------------------------------------------
             // |    ESC    |     A     |     G     |     P    |
-            // |  LAYER 2  |     Z     |     X     | LCTRL+Y  |
-            // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
+            // |  LAYER 1  |     Z     |     X     | LCTRL+Y  |
+            // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
                 &kp ESC     &kp A        &kp G      &kp P
-                &layer_two_underglow       &kp Z        &kp X      &kp LC(Y)
-                &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
+                &layer_one_underglow       &kp Z        &kp X      &kp LC(Y)
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
             sensor-bindings = <&inc_dec_kp RBKT LBKT>;
@@ -204,12 +204,12 @@ E Eraser
         layer_three { // Layer 3
             // -------------------------------------------------
             // |    ESC    |   NONE    |   NONE    |   NONE    |
-            // |  LAYER 2  |   NONE    |   NONE    |   NONE    |
-            // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
+            // |  LAYER 1  |   NONE    |   NONE    |   NONE    |
+            // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
                 &kp ESC     &none        &none      &none
-                &layer_two_underglow       &none        &none      &none
-                &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
+                &layer_one_underglow       &none        &none      &none
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
             sensor-bindings = <&inc_dec_kp &none &none>;
@@ -218,12 +218,12 @@ E Eraser
         layer_four { // Layer 4
             // -------------------------------------------------
             // |    ESC    |   NONE    |   NONE    |   NONE    |
-            // |  LAYER 2  |   NONE    |   NONE    |   NONE    |
-            // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
+            // |  LAYER 1  |   NONE    |   NONE    |   NONE    |
+            // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
                 &kp ESC     &none        &none      &none
-                &layer_two_underglow       &none        &none      &none
-                &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
+                &layer_one_underglow       &none        &none      &none
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
             sensor-bindings = <&inc_dec_kp &none &none>;
@@ -232,12 +232,12 @@ E Eraser
         layer_five { // Layer 5
             // -------------------------------------------------
             // |    ESC    |   NONE    |   NONE    |   NONE    |
-            // |  LAYER 2  |   NONE    |  RBG_TOG  |   NONE    |
-            // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
+            // |  LAYER 1  |   NONE    |  RBG_TOG  |   NONE    |
+            // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
                 &kp ESC     &none        &none      &none
-                &layer_two_underglow       &none        &rgb_ug RGB_TOG      &none
-                &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
+                &layer_one_underglow       &none        &rgb_ug RGB_TOG      &none
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
         // Not actually useful because it gets overwritten by RGB_COLOR_HSB
@@ -247,12 +247,12 @@ E Eraser
         layer_six { // Layer 6
             // -------------------------------------------------
             // | BT CLEAR  |  OUT_BLE  |  OUT_USB  |     B     |
-            // |  LAYER 2  | BT PROF 1 | BT PROF 2 | BT PROF 3 |
-            // |  LAYER 1  |  LAYER 3  |  LAYER 4  |
+            // |  LAYER 1  | BT PROF 1 | BT PROF 2 | BT PROF 3 |
+            // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <    
                 &bt BT_CLR     &out OUT_BLE       &out OUT_USB     &kp B
-                &layer_two_underglow       &bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2
-                &layer_one_underglow       &layer_three_underglow    &layer_four_underglow
+                &layer_one_underglow       &bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
             sensor-bindings = <&bt_encoder>;
