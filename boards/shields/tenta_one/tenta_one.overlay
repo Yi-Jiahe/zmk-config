@@ -20,6 +20,15 @@
             ;
     };
 
+    kscan1: kscan1 {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+
+        input-gpios
+            = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Encoder switch
+            ;
+    };
+
     encoder: encoder {
         compatible = "alps,ec11";
         a-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -52,11 +61,29 @@
 };
 
 / {
+    kscan_composite: kscan_composite {
+        compatible = "zmk,kscan-composite";
+        rows = <3>;
+        columns = <5>;
+
+        matrix {
+            kscan = <&kscan0>;
+        }
+
+        direct {
+            kscan = <&kscan1>;
+            row-offset = <2>;
+            column-offset = <3>;
+        }
+    }
+}
+
+/ {
     default_layout: default_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
-        kscan = <&kscan0>;
+        kscan = <&kscan_composite>;
     };
 };
 
