@@ -167,7 +167,7 @@ E Eraser
             // |  LAYER 1  |  LCTRL+T  | LSHIFT+Z  | LCTRL+Z  |
             // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
-                &kp ESC                    &kp H                     &kp H      &kp P
+                &kp ESC                    &kp SLASH                     &kp H      &kp P
                 &layer_one_underglow       &kp LC(T)                 &kp LS(Z)  &kp LC(Z)
                 &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
