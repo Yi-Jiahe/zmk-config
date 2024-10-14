@@ -184,7 +184,7 @@ E Eraser
             bindings = <
                 &kp ESC     &kp M        &kp S      &kp D
                 &layer_one_underglow       &kp LC(D)    &kp LC(X)      &kp LC(V)
-                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow &kp LC(LA(0))
+                &layer_two_underglow       &layer_three_underglow    &layer_four_underglow &kp LC(LA(NUMBER_0))
             >;
 
             sensor-bindings = <&inc_dec_kp LC(SEMI) LC(MINUS)>;
