@@ -68,15 +68,15 @@
 
         matrix {
             kscan = <&kscan0>;
-        }
+        };
 
         direct {
             kscan = <&kscan1>;
             row-offset = <2>;
             column-offset = <3>;
-        }
-    }
-}
+        };
+    };
+};
 
 / {
     default_layout: default_layout {
