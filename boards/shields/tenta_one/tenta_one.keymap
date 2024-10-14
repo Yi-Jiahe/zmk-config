@@ -210,7 +210,7 @@ E Eraser
             // |  LAYER 2  |  LAYER 3  |  LAYER 4  |
             bindings = <
                 &kp ESC     &none        &none      &none
-                &layer_one_underglow       &LC(S)        &none      &none
+                &layer_one_underglow       &kp LC(S)        &none      &none
                 &layer_two_underglow       &layer_three_underglow    &layer_four_underglow
             >;
 
