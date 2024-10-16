@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-
 /*
 Ctrl+Z Undo
 Ctrl+Y Redo
@@ -152,7 +151,7 @@ E Eraser
             timeout-ms = <50>;
             key-positions = <0 1 2 3>;
             bindings = <&studio_unlock>;
-        }
+        };
     };
 };
 
