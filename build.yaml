@@ -20,4 +20,6 @@
 include:
   - board: nice_nano_v2
     shield: tenta_one 
-    snippet: zmk-usb-logging
+    snippet: 
+      - zmk-usb-logging
+      - studio-rpc-usb-uart
