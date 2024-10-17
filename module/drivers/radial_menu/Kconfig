@@ -1,4 +1,4 @@
-menuconifg RADIAL_MENU
+menuconfig RADIAL_MENU
   bool "2-Axis Joystick Radial Menu"
   depends on ADC
   help
