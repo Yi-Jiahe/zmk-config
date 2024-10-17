@@ -1,0 +1,14 @@
+description: |
+  Driver for a radial menu for a 2-axis joystick
+
+compatible: "radial_menu"
+
+properties:
+  x-gpio:
+    type: phandle
+    required: true
+    description: Analog pin for the x-axis
+  y-gpio:
+    type: phandle
+    required: true
+    description: Analog pin for the y-axis

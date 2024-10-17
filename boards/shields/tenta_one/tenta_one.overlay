@@ -43,6 +43,12 @@
         sensors = <&encoder>;
         triggers-per-rotation = <20>;
     };
+
+    radial_menu: radial_menu {
+        compatible = "radial_menu";
+        x-gpio = <&adc 7>; // P0.31
+        y-gpio = <&adc 5>; // P0.29
+    }
 };
 
 
