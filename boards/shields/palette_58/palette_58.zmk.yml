@@ -1,0 +1,13 @@
+file_format: "1"
+id: palette_58
+name: Palette 58
+type: shield
+url: https://github.com/Yi-Jiahe/Palette58
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - palette_58_left
+  - palette_58_right
