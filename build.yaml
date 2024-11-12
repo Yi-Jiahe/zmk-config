@@ -27,5 +27,8 @@ include:
   #   snippet: zmk-usb-logging studio-rpc-usb-uart
   #   artifact-name: tenta_one_with_logging
   - board: nice_nano_v2
-    shield: palette_58
-    artifact-name: palette_58
+    shield: palette_58_left
+    artifact-name: palette_58_left
+  - board: nice_nano_v2
+    shield: palette_58_right
+    artifact-name: palette_58_right
