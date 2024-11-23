@@ -51,6 +51,23 @@
 };
 
 / {
+    behaviors {
+        one_ht: layer_one_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&layer_one_underglow>;
+        }
+
+        two_ht: layer_two_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&layer_two_underglow>;
+        }
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,7 +83,7 @@
 &kp TAB       &kp Q  &kp W     &kp E     &kp R          &kp T                            &kp Y   &kp U          &kp I     &kp O    &kp P    &kp BSPC
 &mt LCTRL ESC &kp A  &kp S     &kp D     &kp F          &kp G                            &kp H   &kp J          &kp K     &kp L    &kp SEMI &mt RCTRL SQT
 &kp LSHFT     &kp Z  &kp X     &kp C     &kp V          &kp B                            &kp N   &kp M          &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-              &kp CLCK  &kp LALT  &mt LGUI MINUS &kp SPACE &mt &layer_one_underglow LBKT               &mt &layer_two_underglow RBKT &kp RET &mt RGUI EQUAL &kp RALT  &kp RCTRL
+              &kp CLCK  &kp LALT  &mt LGUI MINUS &kp SPACE &one_ht LBKT 0              &two_ht RBKT 0 &kp RET &mt RGUI EQUAL &kp RALT  &kp RCTRL
             >;
         };
 
