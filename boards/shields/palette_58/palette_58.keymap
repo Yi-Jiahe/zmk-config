@@ -35,6 +35,7 @@
                 , <&macro_release &mo 2>
                 , <&macro_tap &rgb_ug LAYER_COLOR_0>;
         };
+    };
 };
 
 / {
