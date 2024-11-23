@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
+#include "palette_58-layouts.dtsi"
 
 / {
     kscan0: kscan0 {
@@ -9,7 +10,7 @@
 };
 
 / {
-    default_transform: matrix_transform0 {
+    default_transform: default_transform {
         compatible = "zmk,matrix-transform";
         columns = <12>;
         rows = <5>;
@@ -21,6 +22,11 @@
                         RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)      RC(4,6) RC(4,7) RC(4,8) RC(4,9) RC(4,10)
         >;
     };
+};
+
+&physical_layout0 {
+    kscan = <&kscan0>;
+    transform = <&default_transform>;
 };
 
 / {
