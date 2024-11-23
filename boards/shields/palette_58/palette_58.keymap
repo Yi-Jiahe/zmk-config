@@ -56,7 +56,6 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
             bindings = <&layer_one_underglow>, <&kp>;
         };
 
@@ -64,7 +63,6 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
             bindings = <&layer_two_underglow>, <&kp>;
         };
     };
