@@ -8,6 +8,7 @@ exposes: [i2c_oled]
 features:
   - keys
   - display
+  - studio
 siblings:
   - palette_58_left
   - palette_58_right
