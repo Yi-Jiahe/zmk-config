@@ -14,8 +14,6 @@ if SHIELD_PALETTE_58_LEFT || SHIELD_PALETTE_58_RIGHT
 config ZMK_SPLIT
     default y
 
-endif
-
 if ZMK_DISPLAY
 
 config I2C
@@ -42,3 +40,5 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+endif
